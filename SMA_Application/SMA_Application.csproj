@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FFB8170F-DA7A-4359-AD0D-9A165A29A55B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SMA_Application</RootNamespace>
+    <AssemblyName>SMA_Application</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DGV Printer, Version=4.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Downloads\DGV Printer.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>D:\PROGRAMMES\V\OTHERS\iTEXT\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>D:\PROGRAMMES\V\OTHERS\iTEXT\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>D:\PROGRAMMES\V\OTHERS\iTEXT\itextsharp.xtra.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppDeveloper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppDeveloper.Designer.cs">
+      <DependentUpon>AppDeveloper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicantEntryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicantEntryForm.Designer.cs">
+      <DependentUpon>ApplicantEntryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BackupDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackupDB.Designer.cs">
+      <DependentUpon>BackupDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContactDeveloper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContactDeveloper.Designer.cs">
+      <DependentUpon>ContactDeveloper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Department.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Department.Designer.cs">
+      <DependentUpon>Department.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExternalData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExternalData.Designer.cs">
+      <DependentUpon>ExternalData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Multisearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Multisearch.Designer.cs">
+      <DependentUpon>Multisearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintingResults.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoundPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Secured.cs" />
+    <Compile Include="UserLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLogin.Designer.cs">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersForm.Designer.cs">
+      <DependentUpon>UsersForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AppDeveloper.resx">
+      <DependentUpon>AppDeveloper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicantEntryForm.resx">
+      <DependentUpon>ApplicantEntryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackupDB.resx">
+      <DependentUpon>BackupDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactDeveloper.resx">
+      <DependentUpon>ContactDeveloper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Department.resx">
+      <DependentUpon>Department.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExternalData.resx">
+      <DependentUpon>ExternalData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Multisearch.resx">
+      <DependentUpon>Multisearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserLogin.resx">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersForm.resx">
+      <DependentUpon>UsersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\st_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go_.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emp_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bkup.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contacts_s.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\del_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\updates.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CLOSE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\max.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NORMAL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\st_11.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email_11.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_user1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emp_11.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_11.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bkup1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contacts_s1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\del_11.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_11.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_11.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_11.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_11.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_11.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\updates1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
